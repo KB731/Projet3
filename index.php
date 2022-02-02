@@ -72,6 +72,7 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
 
     <input type="submit" value="Envoyer">
+    <a href="admin.php">Admin</a>
   </div>
 </form>
 
