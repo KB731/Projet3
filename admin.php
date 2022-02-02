@@ -1,0 +1,40 @@
+<?php
+require_once('database_connexion.php');
+$sql = 'SELECT * FROM `liste`';
+$query = $db->prepare($sql);
+$query->execute();
+$result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+if (isset($_POST['creer_tache'])) { // On vérifie que la variable POST existe
+    if (empty($_POST['creer_tache'])) {  // On vérifie qu'elle a une valeur
+        $erreurs = '<h1> Vous devez indiquer la valeure de la tâche </h1>';
+    } else {
+        $tache = $_POST['creer_tache'];
+        $db->exec("INSERT INTO category(name) VALUES('$tache')"); // On insère la tâche dans la base de donnée
+    }
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+<body>
+       <form class="taches_input" method="post" action="admin.php">
+        <input id="inserer" type="text" name="creer_tache"/>
+        <button id="envoyer">Créer</button>
+    </form>
+    <?php
+if (isset($erreurs)) {
+    ?>
+    <p><?php echo $erreurs ?></p>
+    <?php
+}
+?>
+</body>
+</html>
