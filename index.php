@@ -13,6 +13,6 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
     <title>Le Bon Gite</title>
 </head>
 <body>
-    
+    <h1>hello</h1>
 </body>
 </html>
