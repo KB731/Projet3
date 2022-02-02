@@ -45,6 +45,32 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
     <input type="name" name="Adresse" id="Adresse" required>
     <div class="space">  
 
+    <label for="postal_code">postal_code</label>
+    <input type="name" name="postal_code" id="postal_code" required>
+    <div class="space"> 
+
+    <label for="city">city</label>
+    <input type="name" name="city" id="city" required>
+    <div class="space"> 
+
+    <label for="country">country</label>
+    <input type="name" name="country" id="country" required>
+    <div class="space"> 
+
+    <label for="country">phone</label>
+    <input type="name" name="phone" id="phone" required>
+    <div class="space"> 
+
+    <label for="country">phone</label>
+    <input type="name" name="phone" id="phone" required>
+    <div class="space"> 
+
+    <label for="email">email</label>
+    <input type="mail" name="email" id="email" required>
+    <div class="space"> 
+
+
+
     <input type="submit" value="Envoyer">
   </div>
 </form>
