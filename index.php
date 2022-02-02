@@ -9,10 +9,11 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
 <!DOCTYPE html>
 <html lang="fr">
+<link rel="stylesheet" href="css/styles.css">
 <head>
     <title>Le Bon Gite</title>
 </head>
 <body>
-    <h1>hello</h1>
+
 </body>
 </html>
