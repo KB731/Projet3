@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : lun. 24 jan. 2022 à 15:00
+-- Généré le : jeu. 03 fév. 2022 à 13:55
 -- Version du serveur : 5.7.33
 -- Version de PHP : 7.4.19
 
@@ -43,50 +43,20 @@ CREATE TABLE `accommodation` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `administrator`
---
-
-CREATE TABLE `administrator` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `category`
 --
 
 CREATE TABLE `category` (
   `id` int(11) NOT NULL,
-  `id_accommmodation` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
 --
--- Structure de la table `customer_reservation`
+-- Déchargement des données de la table `category`
 --
 
-CREATE TABLE `customer_reservation` (
-  `id` int(11) NOT NULL,
-  `id_accommmodation` int(11) NOT NULL,
-  `arrival` datetime NOT NULL,
-  `departure` datetime NOT NULL,
-  `adult_number` int(11) NOT NULL,
-  `number_children` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `first_name` varchar(255) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `adress` varchar(255) NOT NULL,
-  `postal_code` varchar(255) NOT NULL,
-  `city` varchar(255) NOT NULL,
-  `country` varchar(255) NOT NULL,
-  `phone` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `category` (`id`, `name`) VALUES
+(3, 'dfdfdf');
 
 --
 -- Index pour les tables déchargées
@@ -99,21 +69,9 @@ ALTER TABLE `accommodation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `administrator`
---
-ALTER TABLE `administrator`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Index pour la table `category`
 --
 ALTER TABLE `category`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `customer_reservation`
---
-ALTER TABLE `customer_reservation`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -127,22 +85,10 @@ ALTER TABLE `accommodation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `administrator`
---
-ALTER TABLE `administrator`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT pour la table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `customer_reservation`
---
-ALTER TABLE `customer_reservation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
