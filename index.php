@@ -25,11 +25,6 @@
             </ul>
         </div>
     </nav>
-    <div class="hero-image">
-  <div class="hero-text">
-    <h1>LE BON GITE</h1>
-  </div>
-</div>
 </header>
 <footer>
         <div class="footbar">
