@@ -43,16 +43,6 @@ if (isset($erreurs)) {
 </html>
 
 
-<?php
-if(isset($_POST['create_gite'])){
-        if (empty($_POST['create_gite'])) {  // On vérifie qu'elle a une valeur
-        $erreurs = '<h1> Vous devez indiquer la valeure de la tâche </h1>';
-    } else {
-        $tache = $_POST['creer_tache'];
-        $db->exec("INSERT INTO category(name) VALUES('$tache')"); // On insère la tâche dans la base de donnée
-        echo ' Catégorie Crée ! ';
-    }
-}
 ?>
 <H1>Crée un nouveau gite </H1>
 <form class="taches_input" method="post" action="admin.php">
