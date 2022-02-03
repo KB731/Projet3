@@ -11,6 +11,7 @@ if (isset($_POST['creer_tache'])) { // On vérifie que la variable POST existe
     } else {
         $tache = $_POST['creer_tache'];
         $db->exec("INSERT INTO category(name) VALUES('$tache')"); // On insère la tâche dans la base de donnée
+        echo ' Catégorie Crée ! ';
     }
 }
 ?>
@@ -26,6 +27,7 @@ if (isset($_POST['creer_tache'])) { // On vérifie que la variable POST existe
 </head>
 <body>
        <form class="taches_input" method="post" action="admin.php">
+           <label for="text">Nom Catégorie</label>
         <input id="inserer" type="text" name="creer_tache"/>
         <button id="envoyer">Créer</button>
     </form>
