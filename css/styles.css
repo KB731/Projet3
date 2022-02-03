@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    padding-top: 0px;
+    width: 100%;
+    position: static;
+    background-color: rgb(5, 9, 58);
+    height: 75px;
+    display: flex;
+}
+
+
+ul
+{
+
+    
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: center;
+    margin: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    
+}
+a
+{
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-style: unset;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: center;
+    padding: center;
+}
+h5{
+    margin: 30px 10px;
+}
