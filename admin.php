@@ -17,7 +17,7 @@ if (isset($_POST['creer_cat'])) { // On vérifie que la variable POST existe
 }
 
 ?>
-
+<!-- test -->
 
 <!DOCTYPE html>
 <html lang="fr">
