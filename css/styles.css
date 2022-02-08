@@ -1,44 +1,40 @@
-body{
+body
+{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
+    background-color: brown;
 }
 
-.navbar {
-    padding-top: 0px;
+
+nav
+{   
+    height: 60px;
     width: 100%;
-    position: static;
-    background-color: rgb(5, 9, 58);
-    height: 75px;
+    background-color: black;
     display: flex;
-}
-
-
-ul
-{
-
-    
-    color: rgb(255, 255, 255);
-    margin: 0;
-    padding: center;
-    margin: center;
-    display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    width: 80%;
-    
+    align-items: center;
 }
-a
-{
-    font-family: Arial, Helvetica, sans-serif;
 
-    font-style: unset;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    margin: center;
-    padding: center;
+.container
+{
+    width: 100%;
+    height: 800px;
+    background-color: rgba(128, 255, 0, 0.616);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-h5{
-    margin: 30px 10px;
+
+.formulaire
+{
+    width: 50%;
+    height: 450px;
+    background-color: blue;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
