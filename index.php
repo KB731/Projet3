@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<?php
+
+require_once ('DBConnexion.php'); /** Utiliser la database connexion */
+$db = new DBConnexion('bd_lebongite', '127.0.0.1','root',''); /** crée une nouvelle connexion a une BDD */
+
+?> 
+
+>>>>>>> 251ffe66945b07fdb50294f41bc82c75d08d9844
 <!DOCTYPE html>
 
 <head>
