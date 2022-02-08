@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 
 
@@ -8,7 +6,6 @@ $db = new DBConnection('bd_lebongite', '127.0.0.1','root',''); /** crée une nou
 
 ?> 
 
->>>>>>> 251ffe66945b07fdb50294f41bc82c75d08d9844
 <!DOCTYPE html>
 
 <head>
