@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 
@@ -50,10 +52,8 @@
 
 
 <?php
-
-
-require './database_connexion.php'; // 
-//* bouclette
+require_once ('DBConnection.php'); 
+$db = new DBConnection('bd_lebongite', '127.0.0.1','root','');
 if (
 
     isset($_POST['accommodation_title']) && empty($_POST['accommodation_title']) &&
@@ -69,7 +69,7 @@ if (
  } else {
 
 
-        $sth = $db->prepare("
+$sth = $db->prepare("
 INSERT INTO accommodation (accommodation_title, description, number_of_beds, number_of_bathrooms, geographic_location, price)
 VALUES (:accommodation_title, :description, :number_of_beds, :number_of_bathrooms, :geographic_location, :price)
 ");
