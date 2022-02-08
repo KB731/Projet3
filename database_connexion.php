@@ -1,9 +1,37 @@
 <?php 
-try{
-    $db = new PDO('mysql:host=localhost;dbname=bd_lebongite', 'root','');
-    $db->exec("UTF8");
-} catch (PDOException $e){
-    echo 'Erreur : '. $e->getMessage();
-    die();
+
+/* -------------------------------------------------------------------------- */
+/*                      Class pour la connexion a la BDD                      */
+/* -------------------------------------------------------------------------- */
+class DBConnexion{
+
+
+    /** Info **/
+    private $dbname; 
+    private $host;
+    private $username;
+    private $password;
+    private $pdo;
+
+
+/* -------------------------------------------------------------------------- */
+/*                                constructeur                                */
+/* -------------------------------------------------------------------------- */
+    public function __construct(string $dbname, string $host, string $username, string $password){
+        $this->dbname = $dbname;
+        $this->host = $host;
+        $this->username = $username;
+        $this->password = $password;
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                     PDO                                    */
+/* -------------------------------------------------------------------------- */
+    public function getPDO(): PDO 
+    {
+        return $this->pdo ??  $this->pdo = new PDO("mysql:dbname={$this->dbname};host={$this->host}", 
+        $this->username, 
+        $this->password);
 }
 
+}
