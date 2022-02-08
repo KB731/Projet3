@@ -2,7 +2,6 @@
 
 require_once ('DBConnexion.php'); /** Utiliser la database connexion */
 $db = new DBConnexion('bd_lebongite', '127.0.0.1','root',''); /** crée une nouvelle connexion a une BDD */
-var_dump($db->getPDO());
 
 if (isset($_POST['creer_cat'])) { // On vérifie que la variable POST existe
     if (empty($_POST['creer_cat'])) {  // On vérifie qu'elle a une valeur

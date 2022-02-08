@@ -1,3 +1,9 @@
+<?php
+
+require_once ('DBConnexion.php'); /** Utiliser la database connexion */
+$db = new DBConnexion('bd_lebongite', '127.0.0.1','root',''); /** crée une nouvelle connexion a une BDD */
+
+?> 
 
 <!DOCTYPE html>
 <head>
@@ -9,9 +15,8 @@
 </head>
 
 
-
 <body>
-    
+    <!-- defsdfsdfsdfsdflol -->
 <header>
     <nav>
         <div class="navbar">
