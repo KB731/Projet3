@@ -8,7 +8,7 @@
 
 <body>
 
-
+<!-- FORM HTML  -->
     <h1>Ajouter des logements</h1>
 
     <form action="" method="post" enctype="multipart/form-data">
@@ -22,11 +22,11 @@
         </div>
         <div class="c100">
             <label for="number_of_beds">Nombres de lits : </label>
-            <input type="number" id="number_of_beds" name="number_of_beds" >
+            <input type="number" id="number_of_beds" name="number_of_beds" min="1" max="30" >
         </div>
         <div class="c100">
             <label for="number_of_bathrooms">Nombres de salles de bains : </label>
-            <input type="number" id="number_of_bathrooms" name="number_of_bathrooms" >
+            <input type="number" id="number_of_bathrooms" name="number_of_bathrooms" min="1" max="" >
         </div>
         <div class="c100">
             <label for="geographic_location">localisation : </label>
@@ -48,10 +48,12 @@
 
 </html>
 
+
 <?php
-require './database_connexion.php';
+require './database_connexion.php'; // 
 //* bouclette
 if (
+
     isset($_POST['accommodation_title']) && empty($_POST['accommodation_title']) &&
     isset($_POST['description'])  && empty($_POST['description']) &&
     isset($_POST['number_of_beds'])  && empty($_POST['number_of_beds']) &&
@@ -76,12 +78,13 @@ VALUES (:accommodation_title, :description, :number_of_beds, :number_of_bathroom
         $sth->bindParam(':geographic_location', $geographic_location);
         $sth->bindParam(':price', $price);
 
-        $accommodation_title = $_POST['accommodation_title'];
-        $description = $_POST['description'];
-        $number_of_beds = $_POST['number_of_beds'];
-        $number_of_bathrooms = $_POST['number_of_bathrooms'];
-        $geographic_location = $_POST['geographic_location'];
-        $price = $_POST['price'];
+        $accommodation_title = isset($_POST['accommodation_title']);
+        $description = isset($_POST['description']);
+        $number_of_beds = isset($_POST['number_of_beds']);
+        $number_of_bathrooms = isset($_POST['number_of_bathrooms']);
+        $geographic_location = isset($_POST['geographic_location']);
+        $price = isset($_POST['price']);
         $sth->execute();
+    
  }
 ?>
