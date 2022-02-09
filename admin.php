@@ -1,9 +1,7 @@
 <?php
-include_once './php/database.php';
-$database = new Database();
-$db = $database->getConnection();
-
-
+require_once ('crud_admin.php');
+require_once ('DBConnection.php'); 
+$db = new DBConnection('bd_lebongite', '127.0.0.1','root',''); /** Utiliser la database connexion */
 ?>
 <!-- test -->
 
