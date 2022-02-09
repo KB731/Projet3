@@ -1,7 +1,5 @@
 <?php
-require_once ('crud_admin.php');
-require_once ('DBConnection.php'); 
-$db = new DBConnection('bd_lebongite', '127.0.0.1','root',''); /** Utiliser la database connexion */
+require_once ('../php/layout_header.php');
 ?>
 <!-- test -->
 
