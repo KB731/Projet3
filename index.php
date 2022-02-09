@@ -1,8 +1,11 @@
 <?php
 
+
 include_once './php/database.php';
 $database = new Database();
 $db = $database->getConnection();
+
+
 ?> 
 
 <!DOCTYPE html>
