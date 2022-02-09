@@ -1,5 +1,9 @@
 <?php
-require_once ('../php/layout_header.php');
+include_once './php/database.php';
+$database = new Database();
+$db = $database->getConnection();
+
+
 ?>
 <!-- test -->
 
