@@ -1,9 +1,8 @@
 <?php
 
-
-require_once ('DBConnection.php'); 
-$db = new DBConnection('bd_lebongite', '127.0.0.1','root',''); /** crée une nouvelle connexion a une BDD */
-
+include_once './php/database.php';
+$database = new Database();
+$db = $database->getConnection();
 ?> 
 
 <!DOCTYPE html>
