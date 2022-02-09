@@ -1,5 +1,5 @@
 <?php
-require_once ('crud_admin.php');
+require_once ('php/crud_admin.php');
 include_once './php/database.php';
 $database = new Database();
 $db = $database->getConnection();?>

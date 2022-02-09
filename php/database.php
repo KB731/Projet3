@@ -5,7 +5,7 @@ class Database{
 /*                                Database Info                               */
 /* -------------------------------------------------------------------------- */
     private $host = "localhost";
-    private $db_name = "db_lebongite";
+    private $db_name = "bd_lebongite";
     private $username = "root";
     private $password = "";
     public $conn;
