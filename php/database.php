@@ -18,7 +18,7 @@ class Database{
    
         try{
             $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-            echo "connexion reussite !";
+            echo "connexion à la BDD effectuer !";
         }catch(PDOException $exception){
             echo "Connection error: " . $exception->getMessage();
         }
