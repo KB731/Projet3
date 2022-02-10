@@ -1,6 +1,6 @@
 <?php
-include_once './php/database.php';
-require_once ('./php/fetch_data.php');
+include_once './php/Database.php';
+require_once ('./php/show.php');
 $database = new Database();
 $db = $database->getConnection();
 ?>
@@ -15,7 +15,7 @@ $db = $database->getConnection();
 	<a href="./admin.php">Home</a>
 	<br/><br/>
 	<div id="msg"></div>
-	<form action="../php/add.php" method="post" name="form1" >
+	<form action="./php/add.php" method="post" name="form1" >
 		<table width="25%" border="0">
 			<tr> 
 				<td>Titre du gite</td>

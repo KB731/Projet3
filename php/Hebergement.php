@@ -1,6 +1,6 @@
 <?php
 
-class signupConfig {
+class Hebergement {
 
     /** on enregistre les valeurs que l'on a besoin - 
      * Elle sont en protected donc on peut les utiliser dans une fonction */

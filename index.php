@@ -23,10 +23,10 @@ $db = $database->getConnection();
 
     <header>
         <nav>
-            <a href="#">Accueil</a>
-            <a href="#">Hebergement</a>
-            <a href="#">Contactez-nous</a>
-            <a href="#">A-propos</a>
+            <a class="menu" href="#">Accueil</a>
+            <a class="menu" href="#">Hebergement</a>
+            <a class="menu" href="#">Contactez-nous</a>
+            <a class="menu" href="#">A-propos</a>
         </nav>
     </header>
 
@@ -34,19 +34,13 @@ $db = $database->getConnection();
         <div class="container">
             
             <div class="formulaire">
-            <h1 class="title" style="color:white">Recherche de gite </h1>
+            <h1 class="title">Recherche de gite </h1>
 
                 <form action="" method="POST">
-                    <div class="form">
-                        <input type="text" >
-                    </div>
-                    <div class="form">
+                    <div class="form-content">
+                        <input type="text" placeholder="Chercher un gite" >
                         <input type="date">
-                    </div>
-                    <div class="form">
                         <input type="date">
-                    </div>
-                    <div class="form">
                         <select name="number_traveller" id="number_traveller">
                             <option value="1 Voyageur">1 Voyageur</option>
                             <option value="2 Voyageurs">2 Voyageurs</option>
@@ -60,7 +54,7 @@ $db = $database->getConnection();
                             <option value="10 Voyageurs">10 Voyageurs</option>
                             <option value="11 Voyageurs">11 Voyageurs</option>
                             <option value="12+ Voyageurs">12 et plus</option>
-                        </select>
+                        </select>                 
                     </div>
                 </form>
                 <a href="https://youtube.com"><h5 class="search">Search</h5> </a>
