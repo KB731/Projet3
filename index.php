@@ -32,18 +32,21 @@ $db = $database->getConnection();
 
     <main>
         <div class="container">
+            
             <div class="formulaire">
+            <h1 class="title" style="color:white">Recherche de gite </h1>
+
                 <form action="" method="POST">
-                    <div>
-                        <input type="text">
+                    <div class="form">
+                        <input type="text" >
                     </div>
-                    <div>
+                    <div class="form">
                         <input type="date">
                     </div>
-                    <div>
+                    <div class="form">
                         <input type="date">
                     </div>
-                    <div>
+                    <div class="form">
                         <select name="number_traveller" id="number_traveller">
                             <option value="1 Voyageur">1 Voyageur</option>
                             <option value="2 Voyageurs">2 Voyageurs</option>
@@ -60,6 +63,8 @@ $db = $database->getConnection();
                         </select>
                     </div>
                 </form>
+                <a href="https://youtube.com"><h5 class="search">Search</h5> </a>
+
             </div>
         </div>
 
