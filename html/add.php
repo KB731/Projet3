@@ -11,7 +11,7 @@
 		<table width="25%" border="0">
 			<tr> 
 				<td>nom</td>
-				<td><input type="text" name="name"></td>
+				<td><input type="text" name="fname"></td>
 			</tr>
 			<tr> 
 				<td>age</td>
