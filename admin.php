@@ -5,6 +5,6 @@ $database = new Database();
 $db = $database->getConnection();?>
 <!-- test -->
 <br><br>
-<button><a href="html/add.html">Ajouter des logements</a> </button>
+<button><a href="html/form_add.php">Ajouter des logements</a> </button>
 
 <!-- hello -->
