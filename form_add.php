@@ -7,22 +7,32 @@ $db = $database->getConnection();
 $sql = "SELECT * FROM accommodation";
 $result = $db->query($sql);
 
+
 ?>
 
 
 <html>
 <head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
 	<title>Ajouter Gite</title>
 </head>
 
 <body>
+
+<main>
+        <div class="containeradmin">
+		<div class="formulaireadmin">
+
 	<a href="./admin.php">Home</a>
 	<br/><br/>
 	<div id="msg"></div>
 	<form action="./php/add_hebergement.php" method="post" name="form1" >
 		<table width="25%" border="0">
 			<tr> 
-				<td>Titre du gite</td>
+				<td>Titre</td>
 				<td><input type="text" name="acc"></td>
 			</tr>
 			<tr> 
@@ -30,11 +40,11 @@ $result = $db->query($sql);
 				<td><input type="text" name="desc"></td>
 			</tr>
 			<tr> 
-				<td>nombres de lits</td>
+				<td>nbr lits</td>
 				<td><input type="number" name="nb"></td>
 			</tr>
 			<tr> 
-				<td>nombres de douches</td>
+				<td>nbr douches</td>
 				<td><input type="number" name="nbt"></td>
 			</tr>
 			<tr> 
@@ -52,12 +62,10 @@ $result = $db->query($sql);
 	</form>
 
 
-	<html>
-		<title> 
-			<head> Gite </head>
-</title>
-<body>
+	</div>
+        </div>
 
+    </main>
 
 <?php 
 if ($result->rowCount() > 0){
@@ -77,6 +85,8 @@ if ($result->rowCount() > 0){
 		<th> delete </th>
 
 </t>
+
+
 <?php
 while($rows = $result->fetch(PDO::FETCH_ASSOC)) {
 
@@ -102,6 +112,10 @@ while($rows = $result->fetch(PDO::FETCH_ASSOC)) {
 
 
 ?> 
+<<<<<<< HEAD
+
+=======
 </form>
+>>>>>>> e0e78055eb7809350912e9b34fa1cbc97afc9c2a
 </body>
 </html> 
