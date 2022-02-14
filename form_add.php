@@ -7,7 +7,6 @@ $db = $database->getConnection();
 $sql = "SELECT * FROM accommodation";
 $result = $db->query($sql);
 
-}
 ?>
 
 
