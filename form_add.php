@@ -72,18 +72,22 @@ if ($result->rowCount() > 0){
 		<th> salle de bains </th>
 		<th> localisation </th>
 		<th> prix </th>
+		<th> delete </th>
+
 </t>
 <?php
-while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+while($rows = $result->fetch(PDO::FETCH_ASSOC)) {
 
 	?> 
 <tr>
+<td> <?php echo $rows['id']; ?> </td> 
 <td> <?php echo $rows['accommodation_title']; ?> </td> 
 <td> <?php echo $rows['description']; ?> </td> 
 <td> <?php echo $rows['number_of_beds']; ?> </td> 
 <td> <?php echo $rows['number_of_bathrooms']; ?> </td> 
 <td> <?php echo $rows['geographic_location']; ?> </td> 
 <td> <?php echo $rows['price']; ?> </td> 
+<td> <a href="">x</a> </td> 
 </tr>
 <?php 
   }
