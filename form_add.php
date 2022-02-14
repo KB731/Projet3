@@ -3,7 +3,7 @@ include_once './php/Database.php';
 $database = new Database();
 $db = $database->getConnection();
 
-$sql = "SELECT * FROM accommodation";
+$sql = 'SELECT * FROM `accommodation`';
 $result = $db->query($sql);
 ?>
 
@@ -48,14 +48,9 @@ $result = $db->query($sql);
 			</tr>
 		</table>
 	</form>
-
-
-	<html>
 		<title> 
 			<head> Gite </head>
 </title>
-<body>
-
 
 <?php 
 if ($result->rowCount() > 0){
@@ -74,16 +69,18 @@ if ($result->rowCount() > 0){
 		<th> prix </th>
 </t>
 <?php
-while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+while($rows = $result->fetch(PDO::FETCH_ASSOC)) {
 
 	?> 
 <tr>
+<td> <?php echo $rows['id']; ?> </td> 
 <td> <?php echo $rows['accommodation_title']; ?> </td> 
 <td> <?php echo $rows['description']; ?> </td> 
 <td> <?php echo $rows['number_of_beds']; ?> </td> 
 <td> <?php echo $rows['number_of_bathrooms']; ?> </td> 
 <td> <?php echo $rows['geographic_location']; ?> </td> 
 <td> <?php echo $rows['price']; ?> </td> 
+<td> <a href="php/delete.php"> x </a> </td> 
 </tr>
 <?php 
   }
