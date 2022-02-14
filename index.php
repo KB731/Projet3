@@ -23,10 +23,10 @@ $db = $database->getConnection();
 
     <header>
         <nav>
-            <a class="menu" href="Projet3\index.php">Accueil</a>
-            <a class="menu" href="Projet3\accommodation.php">Hebergement</a>
-            <a class="menu" href="Projet3\contact.php">Contactez-nous</a>
-            <a class="menu" href="Projet3\about.php">A-propos</a>
+            <a class="menu" href="index.php">Accueil</a>
+            <a class="menu" href="accommodation.php">Hebergement</a>
+            <a class="menu" href="contact.php">Contactez-nous</a>
+            <a class="menu" href="about.php">A-propos</a>
         </nav>
     </header>
 
