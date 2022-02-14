@@ -74,10 +74,11 @@ if ($result->rowCount() > 0){
 		<th> prix </th>
 </t>
 <?php
-while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+while($rows = $result->fetch(PDO::FETCH_ASSOC)) {
 
 	?> 
 <tr>
+<td> <?php echo $rows['id']; ?> </td> 
 <td> <?php echo $rows['accommodation_title']; ?> </td> 
 <td> <?php echo $rows['description']; ?> </td> 
 <td> <?php echo $rows['number_of_beds']; ?> </td> 

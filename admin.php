@@ -1,6 +1,5 @@
-cc<?php
+<?php
 include_once './php/Database.php';
-include_once './php/add.php';
 $database = new Database();
 $db = $database->getConnection();?>
 <!-- test -->
