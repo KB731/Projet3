@@ -41,6 +41,7 @@ nav
     
 }
 
+
 .formulaire
 {
     width: 30%;
@@ -53,7 +54,34 @@ nav
     justify-content: space-around;
     padding: 0 100px ;
 }
+.containerlarge
+{
+    width: 100%;
+    max-width: 3000px;
+    height: 550px;
+    z-index: 0;
+    padding-bottom: 1000px;
+    color: antiquewhite;
+}
 
+
+.formulairelarge
+{
+    width: 70%;
+    height: 450px;
+    background-color: rgba(36, 36, 36, 0.733);
+    border-radius: 2%;
+    margin: 200px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around 10px;
+    padding: 10 100px ;
+    color: antiquewhite;
+}
+
+p{
+    color: aliceblue;
+}
 a{
     text-decoration: none;
     color: white;
