@@ -6,5 +6,5 @@ $db = $database->getConnection();?>
 <!-- test -->
 <br><br>
 <button><a href="form_add.php">Ajouter des logements</a> </button>
-<button><a href="create_categorie.php">Ajouter des logements</a> </button>
+<button><a href="create_categorie.php">Ajout de categorie</a> </button>
 <!-- hello -->
