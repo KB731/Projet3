@@ -1,6 +1,5 @@
 <?php
 include_once './php/Database.php';
-require_once ('./php/show.php');
 $database = new Database();
 $db = $database->getConnection();
 ?>
