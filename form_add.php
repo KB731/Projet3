@@ -1,33 +1,26 @@
 <?php
 include_once './php/Database.php';
-require_once ('./php/show.php');
 $database = new Database();
 $db = $database->getConnection();
+
+$sql = "SELECT * FROM accommodation";
+$result = $db->query($sql);
 ?>
 
 
 <html>
 <head>
-	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
 	<title>Ajouter Gite</title>
 </head>
 
 <body>
-<header>
-<main>
-        <div class="containerlarge">
-        <div class="formulairelarge">
-
 	<a href="./admin.php">Home</a>
 	<br/><br/>
 	<div id="msg"></div>
 	<form action="./php/add_hebergement.php" method="post" name="form1" >
 		<table width="25%" border="0">
 			<tr> 
-				<td>Titre</td>
+				<td>Titre du gite</td>
 				<td><input type="text" name="acc"></td>
 			</tr>
 			<tr> 
@@ -35,11 +28,11 @@ $db = $database->getConnection();
 				<td><input type="text" name="desc"></td>
 			</tr>
 			<tr> 
-				<td>nbr lits</td>
+				<td>nombres de lits</td>
 				<td><input type="number" name="nb"></td>
 			</tr>
 			<tr> 
-				<td>nbr douches</td>
+				<td>nombres de douches</td>
 				<td><input type="number" name="nbt"></td>
 			</tr>
 			<tr> 
@@ -57,13 +50,20 @@ $db = $database->getConnection();
 	</form>
 
 
+	<html>
+		<title> 
+			<head> Gite </head>
+</title>
+<body>
 
 
-		<table algin="center" border="1px" style="width:600px"; line-height:40px;> 
-		<tr>
+<?php 
+if ($result->rowCount() > 0){
+?> 
+<table algin="center" border="1px" style="width:600px"; line-height:40px;> 
+	<tr>
 		<th colspan="8"><h2> Gite enregister </h2> </th>
-
-		</tr>
+</tr>
 		<t>
 		<th> ID </th>
 		<th> Titre </th>
@@ -72,16 +72,11 @@ $db = $database->getConnection();
 		<th> salle de bains </th>
 		<th> localisation </th>
 		<th> prix </th>
-		</t>
+</t>
+<?php
+while($row = $result->fetch(PDO::FETCH_ASSOC)) {
 
-  		</div>
-        </div>
-</header>
-<?php 
-while($rows=mysql_fetch_assoc($results))
-{
-	?>
-
+	?> 
 <tr>
 <td> <?php echo $rows['accommodation_title']; ?> </td> 
 <td> <?php echo $rows['description']; ?> </td> 
@@ -89,16 +84,13 @@ while($rows=mysql_fetch_assoc($results))
 <td> <?php echo $rows['number_of_bathrooms']; ?> </td> 
 <td> <?php echo $rows['geographic_location']; ?> </td> 
 <td> <?php echo $rows['price']; ?> </td> 
-
 </tr>
-
-
 <?php 
+  }
+  echo "</table>";
+} else {
+  echo "0 results";
 }
-?>
-</table>
-
+?> 
 </body>
 </html> 
-
-
