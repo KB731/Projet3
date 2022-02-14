@@ -1,8 +1,10 @@
 <?php
 include_once './php/Database.php';
-require_once ('./php/show.php');
 $database = new Database();
 $db = $database->getConnection();
+
+$sql = "SELECT * FROM accommodation";
+$result = $db->query($sql);
 ?>
 
 
@@ -54,10 +56,13 @@ $db = $database->getConnection();
 </title>
 <body>
 
+
+<?php 
+if ($result->rowCount() > 0){
+?> 
 <table algin="center" border="1px" style="width:600px"; line-height:40px;> 
 	<tr>
 		<th colspan="8"><h2> Gite enregister </h2> </th>
-
 </tr>
 		<t>
 		<th> ID </th>
@@ -68,12 +73,10 @@ $db = $database->getConnection();
 		<th> localisation </th>
 		<th> prix </th>
 </t>
+<?php
+while($row = $result->fetch(PDO::FETCH_ASSOC)) {
 
-<?php 
-while($rows=mysql_fetch_assoc($results))
-{
-	?>
-
+	?> 
 <tr>
 <td> <?php echo $rows['accommodation_title']; ?> </td> 
 <td> <?php echo $rows['description']; ?> </td> 
@@ -81,16 +84,13 @@ while($rows=mysql_fetch_assoc($results))
 <td> <?php echo $rows['number_of_bathrooms']; ?> </td> 
 <td> <?php echo $rows['geographic_location']; ?> </td> 
 <td> <?php echo $rows['price']; ?> </td> 
-
 </tr>
-
-
 <?php 
+  }
+  echo "</table>";
+} else {
+  echo "0 results";
 }
-?>
-</table>
-
+?> 
 </body>
 </html> 
-
-
