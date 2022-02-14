@@ -17,7 +17,7 @@ $result = $db->query($sql);
 	<a href="./admin.php">Home</a>
 	<br/><br/>
 	<div id="msg"></div>
-	<form action="./php/add.php" method="post" name="form1" >
+	<form action="./php/add_hebergement.php" method="post" name="form1" >
 		<table width="25%" border="0">
 			<tr> 
 				<td>Titre du gite</td>
