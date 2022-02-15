@@ -3,7 +3,20 @@
     padding:0;
     box-sizing: border-box;
 }
-body
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+p{
+    color: aliceblue;
+}
+
+
+/* Page Index.php */
+.home
 {
     background-image:url(https://wallpaperaccess.com/full/435709.jpg);
     background-repeat: no-repeat;
@@ -13,6 +26,72 @@ body
     background-color: transparent;
 }
 
+
+/* Page Form_add.php */
+.form_add
+{
+    background-image:url(https://wallpaperaccess.com/full/435709.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+}
+
+/* Page Admin.php */
+.admin 
+{
+    background-image:url("../pic/background_panel_admin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 27em;
+}
+
+
+/* Form_Add.php */
+
+.input-form{
+    background-color: transparent;
+    border: 0.2rem solid #858585;
+    border-radius: 60em;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+tr{
+    color: white;
+}
+
+
+.containeradmin
+{
+    width: 100%;
+    max-width: 3000px;
+    height: 550px;
+    z-index: 0;
+    padding-bottom: 1000px;
+    color: antiquewhite;
+}
+
+
+.formulaireadmin
+{
+    width: 60%;
+    height: 450px;
+    background-color: rgba(36, 36, 36, 0.733);
+    border-radius: 2%;
+    margin: 20 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around 10px;
+    padding: 10 100px ;
+    color: antiquewhite;
+}
+
+/* Index.php */
 header{
     width: 100%;
     max-width: 3000px;
@@ -41,6 +120,26 @@ nav
     
 }
 
+.input_index{
+    background-color: transparent;
+    border: 0.2rem solid #858585;
+    border-radius: 60em;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+
+.input_nombre{
+    background-color: transparent;
+    border: 0.2rem solid #858585;
+    border-radius: 60em;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+option{
+    color: black;
+}
 
 .formulaire
 {
@@ -53,38 +152,6 @@ nav
     flex-direction: column;
     justify-content: space-around;
     padding: 0 100px ;
-}
-.containerlarge
-{
-    width: 100%;
-    max-width: 3000px;
-    height: 550px;
-    z-index: 0;
-    padding-bottom: 1000px;
-    color: antiquewhite;
-}
-
-
-.formulairelarge
-{
-    width: 70%;
-    height: 450px;
-    background-color: rgba(36, 36, 36, 0.733);
-    border-radius: 2%;
-    margin: 200px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around 10px;
-    padding: 10 100px ;
-    color: antiquewhite;
-}
-
-p{
-    color: aliceblue;
-}
-a{
-    text-decoration: none;
-    color: white;
 }
 
 .search{
@@ -103,23 +170,6 @@ a{
     color: rgb(255, 255, 255);
 }
 
-input{
-    background-color: transparent;
-    border: 0.2rem solid #858585;
-    border-radius: 60em;
-    color: rgb(255, 255, 255);
-    font-size: .9375rem;
-    font-weight: 300;
-}
-
-.form-content{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    height: 250px;
-    
-}   
-
 .search{
     color: rgb(33, 218, 16);
     font-size: 30px;
@@ -131,3 +181,28 @@ input{
     color: white;
     transform: scale(120%);
 }
+
+/* CSS DE LA PAGE D'ACCUEIL ADMIN */
+.btn-grad 
+{
+    background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%)
+}
+
+.btn-grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }

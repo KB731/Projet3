@@ -7,63 +7,60 @@ $db = $database->getConnection();
 $sql = "SELECT * FROM accommodation";
 $result = $db->query($sql);
 
-}
 ?>
 
 
 <html>
 <head>
+	<link rel="stylesheet" href="css/styles.css">
 	<title>Ajouter Gite</title>
 </head>
 
-<body>
+<main>
+
+<body class="form_add">
 	<a href="./admin.php">Home</a>
 	<br/><br/>
-	<div id="msg"></div>
-	<form action="./php/add_hebergement.php" method="post" name="form1" >
-		<table width="25%" border="0">
+	<div class="containeradmin">
+		<div class="formulaireadmin">
+	 <form action="./php/add_hebergement.php" method="post" name="form1" >
+		<table>
 			<tr> 
 				<td>Titre du gite</td>
-				<td><input type="text" name="acc"></td>
+				<td><input type="text" name="acc" class="input-form"></td>
 			</tr>
 			<tr> 
 				<td>description</td>
-				<td><input type="text" name="desc"></td>
+				<td><input type="text" name="desc" class="input-form"></td>
 			</tr>
 			<tr> 
 				<td>nombres de lits</td>
-				<td><input type="number" name="nb"></td>
+				<td><input type="number" name="nb" class="input-form"></td>
 			</tr>
 			<tr> 
 				<td>nombres de douches</td>
-				<td><input type="number" name="nbt"></td>
+				<td><input type="number" name="nbt" class="input-form"></td>
 			</tr>
 			<tr> 
 				<td>localisation</td>
-				<td><input type="text" name="gl"></td>
+				<td><input type="text" name="gl" class="input-form"></td>
 			</tr>
 			<tr> 
 				<td>prix</td>
-				<td><input type="number" name="price"></td>
+				<td><input type="number" name="price" class="input-form"></td>
 			</tr>
 				<td></td>
-				<td><input type="submit" name="Submit" value="Ajouter"></td>
+				<td><input type="submit" name="Submit" value="Ajouter" class="input-form"> </td>
 			</tr>
 		</table>
 	</form>
-
-
-	<html>
-		<title> 
-			<head> Gite </head>
-</title>
-<body>
-
-
+	 </div>
+	 </main>
 <?php 
 if ($result->rowCount() > 0){
 ?> 
-<table algin="center" border="1px" style="width:600px"; line-height:40px;> 
+<div class="tableau">
+<table> 
 	<tr>
 		<th colspan="8"><h2> Gite enregister </h2> </th>
 </tr>
@@ -78,6 +75,8 @@ if ($result->rowCount() > 0){
 		<th> delete </th>
 
 </t>
+</div>
+
 <?php
 while($rows = $result->fetch(PDO::FETCH_ASSOC)) {
 
