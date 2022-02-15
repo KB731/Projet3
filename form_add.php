@@ -1,10 +1,13 @@
 <?php
 include_once './php/Database.php';
+include_once './php/add_hebergement.php';
 $database = new Database();
 $db = $database->getConnection();
 
 $sql = "SELECT * FROM accommodation";
 $result = $db->query($sql);
+
+}
 ?>
 
 
@@ -13,7 +16,7 @@ $result = $db->query($sql);
 	<title>Ajouter Gite</title>
 </head>
 
-<body id="index">
+<body>
 	<a href="./admin.php">Home</a>
 	<br/><br/>
 	<div id="msg"></div>
@@ -72,11 +75,15 @@ if ($result->rowCount() > 0){
 		<th> salle de bains </th>
 		<th> localisation </th>
 		<th> prix </th>
+		<th> delete </th>
+
 </t>
 <?php
 while($rows = $result->fetch(PDO::FETCH_ASSOC)) {
 
-	?> 
+	?>
+	
+	<form action="" name="form2">
 <tr>
 <td> <?php echo $rows['id']; ?> </td> 
 <td> <?php echo $rows['accommodation_title']; ?> </td> 
@@ -85,6 +92,7 @@ while($rows = $result->fetch(PDO::FETCH_ASSOC)) {
 <td> <?php echo $rows['number_of_bathrooms']; ?> </td> 
 <td> <?php echo $rows['geographic_location']; ?> </td> 
 <td> <?php echo $rows['price']; ?> </td> 
+<td><a class="suppr" href="form_add.php?supprimer_tache=<?php echo $taches['id'] ?>"> X</a></td>
 </tr>
 <?php 
   }
@@ -92,6 +100,9 @@ while($rows = $result->fetch(PDO::FETCH_ASSOC)) {
 } else {
   echo "0 results";
 }
+
+
 ?> 
+</form>
 </body>
 </html> 
