@@ -3,6 +3,9 @@ include_once './php/Database.php';
 include_once './php/add_categorie.php';
 $database = new Database();
 $db = $database->getConnection();
+
+$sql = "SELECT * FROM category";
+$result = $db->query($sql);
 ?>
 
 
@@ -26,4 +29,45 @@ $db = $database->getConnection();
 			</tr>
 		</table>
 	</form>
+
+
+	<?php 
+if ($result->rowCount() > 0){
+?> 
+<table algin="center" border="1px" style="width:600px"; line-height:40px;> 
+	<tr>
+		<th colspan="8"><h2> Gite enregister </h2> </th>
+</tr>
+		<t>
+		<th> ID </th>
+		<th> Name </th>
+		<th> delete </th>
+
+</t>
+
+
+<?php
+while($rows = $result->fetch(PDO::FETCH_ASSOC)) {
+
+	?>
+	
+	<form action="" name="form2">
+<tr>
+<td> <?php echo $rows['id']; ?> </td> 
+<td> <?php echo $rows['name']; ?> </td> 
+<td><a class="suppr" href="form_add.php?supprimer_tache=<?php echo $taches['id'] ?>"> X</a></td>
+
+</tr>
+<?php 
+  }
+  echo "</table>";
+} else {
+  echo "0 results";
+}
+
+
+?> 
+
+
+</html>
 

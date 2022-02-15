@@ -113,6 +113,9 @@ while($rows = $result->fetch(PDO::FETCH_ASSOC)) {
 
 ?> 
 </form>
+<<<<<<< HEAD
 
+=======
+>>>>>>> f504bd1c7733bc06754b9d1cf67b3404d8d78559
 </body>
 </html> 
